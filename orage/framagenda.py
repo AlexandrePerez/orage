@@ -31,17 +31,19 @@ def from_json(json_file):
     return vcalendars
 
 
-def create_vevents(person, json_file):
+def create_vevents(person, json_file, login, password):
     """
     Create the events on the online calendar.
 
     :param person: the minister as a dictionary
     :param json_file: the input events to add to the calendar
+    :param login: login for the remote calendar
+    :param password: password for the remote calendar
     :return:
     """
 
     client = caldav.DAVClient("https://framagenda.org/remote.php/dav/calendars/Orage/",
-                              auth=HTTPBasicAuth("Orage", "uowF3w#y?So1WucR\:C]"))  # TODO do NOT hard-code id/password
+                              auth=HTTPBasicAuth(login, password))
     principal = client.principal()
     calendars = principal.calendars()
 
