@@ -1,0 +1,12 @@
+{
+  "sources": [
+    { "id" : 0,
+      "person" :
+      { "last_name" : "Philippe",
+        "first_name" : "Edouard",
+        "role" : "1er ministre" },
+      "url" : "https://www.gouvernement.fr/agenda-du-premier-ministre",
+      "calendar": "https://framagenda.org/remote.php/dav/calendars/Orage/edouard-philippe",
+      "update": 1}
+  ]
+}
